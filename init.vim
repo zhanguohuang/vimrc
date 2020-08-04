@@ -6,26 +6,16 @@ let mapleader=" "
 " inoremap jk <Esc>
 
 " from github prontera
-" noremap gN #zz
-" noremap gn *zz
-" noremap n nzz
-" noremap N Nzz
 noremap G Gzz
 noremap { {zz
 noremap } }zz
 noremap gd gdzz
-" noremap <C-D> <C-D>zz
-" noremap <C-U> <C-U>zz
-" noremap <C-e> 10<C-e>
-" noremap <C-y> 10<C-y>
 noremap zh 50zh
 noremap zl 50zl
 noremap { ?{<CR>
 noremap } /}<CR>
 noremap ] }
 noremap [ {
-" noremap <c-a> ^
-" noremap <c-e> $
 noremap `i `^
 noremap `y `[
 noremap Y y$
@@ -36,7 +26,7 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-k> <c-w>k
-" nnoremap <c-w> <c-w>c
+nnoremap <c-c> <c-w>c
 
 " 高亮搜索
 " set hlsearch
@@ -158,10 +148,12 @@ nnoremap <leader>v :NERDTreeFind<cr>
 nnoremap <leader>g :NERDTreeToggle<cr>
 
 nnoremap <leader>t :TagbarToggle<cr>
-" nmap ss <Plug>(easymotion-s2)
 
+" nmap ss <Plug>(easymotion-s2)
 nmap <leader>w <Plug>(easymotion-w)
 nmap <leader>b <Plug>(easymotion-b)
+nmap <leader>j <Plug>(easymotion-j)
+nmap <leader>k <Plug>(easymotion-k)
 
 " ale-setting {{{
 let g:ale_set_highlights = 1
