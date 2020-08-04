@@ -38,11 +38,6 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
-""" Mappings --------------------------------
-map s <Plug>(easymotion-s)
-" map <leader>e <Plug>(easymotion-e)
-
-
 " ctrl cmd
 nnoremap <C-A> ^
 nnoremap <C-D> 15<C-e>
