@@ -5,13 +5,17 @@ inoremap jk <Esc>
 
 nnoremap } /}<CR>
 nnoremap { ?{<CR>
+nnoremap [ {
+nnoremap ] }
 nnoremap zh 50zh
 nnoremap zl 50zl
 nnoremap `i `^
 nnoremap `y `[
+nnoremap / /\V
+nnoremap ? ?\V
 
 " 高亮搜索
-" set hlsearch
+set hlsearch
 set ignorecase
 set incsearch
 set clipboard=unnamed
@@ -32,15 +36,16 @@ let g:argtextobj_pairs="[:],(:),<:>"
 
 set showmode
 set so=5
+set ss=15
 set nu
+set scr
 " set rnu
 set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
 " ctrl cmd
-nnoremap <C-A> ^
-nnoremap <C-D> 15<C-e>
+nnoremap <C-A>
 nnoremap <C-E> $
 nnoremap <C-h> <C-w>h
 nnoremap <C-I> <ESC>:action Forward<CR>
@@ -48,7 +53,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-O> <ESC>:action Back<CR>
-nnoremap <C-U> 15<C-y>
 
 " leader map
 map <leader>a :action Annotate<CR>
