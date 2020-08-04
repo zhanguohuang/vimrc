@@ -2,16 +2,17 @@
 let mapleader=" "
 
 inoremap jk <Esc>
+
+nnoremap } /}<CR>
+nnoremap { ?{<CR>
 nnoremap zh 50zh
 nnoremap zl 50zl
 nnoremap `i `^
 nnoremap `y `[
-nnoremap <C-D> 15<C-e>
-nnoremap <C-U> 15<C-y>
 
 " 高亮搜索
 " set hlsearch
-set ignorecast
+set ignorecase
 set incsearch
 set clipboard=unnamed
 set clipboard+=ideaput
@@ -24,37 +25,42 @@ set argtextobj
 set easymotion
 set textobj-entire
 set ReplaceWithRegister
+set exchange
+set highlightedyank
+
 let g:argtextobj_pairs="[:],(:),<:>"
+
 set showmode
 set so=5
 set nu
-set rnu
+" set rnu
 set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
 """ Mappings --------------------------------
-" map <leader>f <Plug>(easymotion-s)
+map s <Plug>(easymotion-s)
 " map <leader>e <Plug>(easymotion-e)
 
 
 " ctrl cmd
+nnoremap <C-A> ^
+nnoremap <C-D> 15<C-e>
+nnoremap <C-E> $
 nnoremap <C-h> <C-w>h
 nnoremap <C-I> <ESC>:action Forward<CR>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-map <C-n> <Down>
 nnoremap <C-O> <ESC>:action Back<CR>
-map <C-p> <Up>
+nnoremap <C-U> 15<C-y>
 
 " leader map
 map <leader>a :action Annotate<CR>
 map <leader>b <Plug>(easymotion-b)
-map <leader>c :action HideActiveWindow<CR>
+map <leader>c :action Stop<CR>
 map <leader>d :action Debug<CR>
 map <leader>f <ESC>:action FileStructurePopup<CR>
-map <leader>g <ESC>:action ActivateProjectToolWindow<CR>
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 map <leader>l :action SelectInProjectView<CR>
@@ -63,11 +69,12 @@ map <leader>n :action GotoNextError<CR>
 map <leader>o :action GotoFile<CR>
 map <leader>p :action GotoPreviousError<CR>
 map <leader>r :action RenameElement<CR>
-map <leader>w <Plug>(easymotion-w)
 map <leader>s :action FindInPath<CR>
-map <leader>t :shell<CR>
+map <leader>t :action Terminal.OpenInTerminal<CR>
 map <leader>u <ESC>:action ShowUsages<CR>
+map <leader>w <Plug>(easymotion-w)
 map <leader>z :action ToggleDistractionFreeMode<CR>
+
 map <F6> :action ToggleLineBreakpoint<CR>
 
 " go
