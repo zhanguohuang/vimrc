@@ -1,0 +1,75 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+inoremap jk <Esc>
+nnoremap zh 50zh
+nnoremap zl 50zl
+nnoremap `i `^
+nnoremap `y `[
+nnoremap <C-D> 15<C-e>
+nnoremap <C-U> 15<C-y>
+
+" 高亮搜索
+" set hlsearch
+set ignorecast
+set incsearch
+set clipboard=unnamed
+set clipboard+=ideaput
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+let g:argtextobj_pairs="[:],(:),<:>"
+set showmode
+set so=5
+set nu
+set rnu
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+" map <leader>f <Plug>(easymotion-s)
+" map <leader>e <Plug>(easymotion-e)
+
+
+" ctrl cmd
+nnoremap <C-h> <C-w>h
+nnoremap <C-I> <ESC>:action Forward<CR>
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+map <C-n> <Down>
+nnoremap <C-O> <ESC>:action Back<CR>
+map <C-p> <Up>
+
+" leader map
+map <leader>a :action Annotate<CR>
+map <leader>b <Plug>(easymotion-b)
+map <leader>c :action HideActiveWindow<CR>
+map <leader>d :action Debug<CR>
+map <leader>f <ESC>:action FileStructurePopup<CR>
+map <leader>g <ESC>:action ActivateProjectToolWindow<CR>
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+map <leader>l :action SelectInProjectView<CR>
+map <leader>m :action ShowBookmarks<CR>
+map <leader>n :action GotoNextError<CR>
+map <leader>o :action GotoFile<CR>
+map <leader>p :action GotoPreviousError<CR>
+map <leader>r :action RenameElement<CR>
+map <leader>w <Plug>(easymotion-w)
+map <leader>s :action FindInPath<CR>
+map <leader>t :shell<CR>
+map <leader>u <ESC>:action ShowUsages<CR>
+map <leader>z :action ToggleDistractionFreeMode<CR>
+map <F6> :action ToggleLineBreakpoint<CR>
+
+" go
+nnoremap gd gdzz
+nnoremap gf :action ReformatCode<CR>
