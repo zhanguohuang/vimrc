@@ -11,11 +11,13 @@ nnoremap zh 50zh
 nnoremap zl 50zl
 nnoremap `i `^
 nnoremap `y `[
-nnoremap / /\V
-nnoremap ? ?\V
+nnoremap / <ESC>"ryiw/\V
+nnoremap ? <ESC>"ryiw?\V
+nnoremap : <ESC>"ryiw:
 
 " 高亮搜索
-set hlsearch
+" set hlsearch
+set smartcase
 set ignorecase
 set incsearch
 set clipboard=unnamed
@@ -45,7 +47,7 @@ set ideastatusicon=gray
 set idearefactormode=keep
 
 " ctrl cmd
-nnoremap <C-A>
+nnoremap <C-A> ^
 nnoremap <C-E> $
 nnoremap <C-h> <C-w>h
 nnoremap <C-I> <ESC>:action Forward<CR>
