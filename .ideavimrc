@@ -3,16 +3,17 @@ let mapleader=" "
 
 " inoremap jk <Esc>
 
-nnoremap } /}<CR>
-nnoremap { ?{<CR>
-nnoremap [ {
-nnoremap ] }
+map [[ ?{<CR>
+map ]] /{<CR>
+map ][ /}<CR>
+map [] ?}<CR>
 nnoremap zh 50zh
 nnoremap zl 50zl
-nnoremap `i `^
-nnoremap `y `[
-nnoremap / <ESC>"ryiw/\V
-nnoremap ? <ESC>"ryiw?\V
+" nnoremap `i `^
+" nnoremap `y `[
+nnoremap Y y$
+nnoremap / <ESC>"ryiw/\v
+nnoremap ? <ESC>"ryiw?\v
 nnoremap : <ESC>"ryiw:
 
 " 高亮搜索
@@ -41,14 +42,16 @@ set so=5
 set ss=15
 set nu
 set scr
-" set rnu
+set rnu
 set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
 " ctrl cmd
 nnoremap <C-A> ^
+" nnoremap <C-B> ?\Vfunc <CR>
 nnoremap <C-E> $
+nnoremap <C-F> <ESC>:action FileStructurePopup<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-I> <ESC>:action Forward<CR>
 nnoremap <C-j> <C-w>j
@@ -58,12 +61,12 @@ nnoremap <C-O> <ESC>:action Back<CR>
 
 " leader map
 map <leader>a :action Annotate<CR>
-map <leader>b <Plug>(easymotion-b)
+" map <leader>b <Plug>(easymotion-b)
 map <leader>c :action Stop<CR>
 map <leader>d :action Debug<CR>
-map <leader>f <ESC>:action FileStructurePopup<CR>
-map <leader>j <Plug>(easymotion-j)
-map <leader>k <Plug>(easymotion-k)
+" map <leader>f <ESC>:action FileStructurePopup<CR>
+" map <leader>j <Plug>(easymotion-j)
+" map <leader>k <Plug>(easymotion-k)
 map <leader>l :action SelectInProjectView<CR>
 map <leader>m :action ShowBookmarks<CR>
 map <leader>n :action GotoNextError<CR>
@@ -73,11 +76,12 @@ map <leader>r :action RenameElement<CR>
 map <leader>s :action FindInPath<CR>
 map <leader>t :action Terminal.OpenInTerminal<CR>
 map <leader>u <ESC>:action ShowUsages<CR>
-map <leader>w <Plug>(easymotion-w)
+" map <leader>w <Plug>(easymotion-w)
 map <leader>z :action ToggleDistractionFreeMode<CR>
 
 map <F6> :action ToggleLineBreakpoint<CR>
 
 " go
 nnoremap gd gdzz
+nnoremap gD :vs<CR>gd
 nnoremap gf :action ReformatCode<CR>
