@@ -7,15 +7,19 @@ let mapleader=" "
 
 " from github prontera
 noremap G Gzz
-noremap { {zz
-noremap } }zz
+" noremap { {zz
+" noremap } }zz
 noremap gd gdzz
 noremap zh 50zh
 noremap zl 50zl
-noremap { ?{<CR>
-noremap } /}<CR>
-noremap ] }
-noremap [ {
+" noremap { ?{<CR>
+" noremap } /}<CR>
+" noremap ] }
+" noremap [ {
+noremap [[ ?{<CR>w99[{
+noremap ][ /}<CR>b99]}
+noremap ]] j0[[%/{<CR>
+noremap [] k$][%?}<CR>
 noremap `i `^
 noremap `y `[
 noremap Y y$
@@ -140,6 +144,7 @@ endfunction
 
 map <leader>f :Files<CR>
 map <leader>e :Buffers<CR>
+map <leader>l :Lines<CR>
 let g:fzf_action = { 'ctrl-e': 'edit' }
 " 用 leader+ag 搜索当前 cursor 下单词 see: https://github.com/junegunn/fzf.vim/issues/50
 nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
