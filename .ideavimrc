@@ -3,14 +3,12 @@ let mapleader=" "
 
 " inoremap jk <Esc>
 
-map [[ ?{<CR>
-map ]] /{<CR>
-map ][ /}<CR>
-map [] ?}<CR>
+map [[ ?\V{<CR>
+map ]] /\V{<CR>
+map ][ /\V}<CR>
+map [] ?\V}<CR>
 nnoremap zh 50zh
 nnoremap zl 50zl
-" nnoremap `i `^
-" nnoremap `y `[
 nnoremap Y y$
 nnoremap / <ESC>"ryiw/\v
 nnoremap ? <ESC>"ryiw?\v
@@ -35,6 +33,7 @@ set ReplaceWithRegister
 set exchange
 set highlightedyank
 
+
 let g:argtextobj_pairs="[:],(:),<:>"
 
 set showmode
@@ -48,16 +47,16 @@ set ideastatusicon=gray
 set idearefactormode=keep
 
 " ctrl cmd
-nnoremap <C-A> ^
+map <C-A> ^
 " nnoremap <C-B> ?\Vfunc <CR>
-nnoremap <C-E> $
-nnoremap <C-F> <ESC>:action FileStructurePopup<CR>
+map <C-E> $
+map <C-F> <ESC>:action FileStructurePopup<CR>
 nnoremap <C-h> <C-w>h
-nnoremap <C-I> <ESC>:action Forward<CR>
+map <C-I> <ESC>:action Forward<CR>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <C-O> <ESC>:action Back<CR>
+map <C-O> <ESC>:action Back<CR>
 
 " leader map
 map <leader>a :action Annotate<CR>
@@ -82,6 +81,11 @@ map <leader>z :action ToggleDistractionFreeMode<CR>
 map <F6> :action ToggleLineBreakpoint<CR>
 
 " go
-nnoremap gd gdzz
-nnoremap gD :vs<CR>gd
-nnoremap gf :action ReformatCode<CR>
+map gd gdzz
+map gD :vs<CR>gd
+map gf :action ReformatCode<CR>
+nnoremap [m ?func<CR>
+nnoremap ]m /func<CR>
+nnoremap ]) /\V)<CR>
+nnoremap [( ?\V(<CR>
+
