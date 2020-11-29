@@ -1,17 +1,19 @@
 """ Map leader to space ---------------------
 let mapleader=" "
 
-" inoremap jk <Esc>
+inoremap jk <Esc>
 
 map [[ ?\V{<CR>
 map ]] /\V{<CR>
 map ][ /\V}<CR>
 map [] ?\V}<CR>
+nnoremap J 3j
+nnoremap K 3k
 nnoremap zh 50zh
 nnoremap zl 50zl
 nnoremap Y y$
-nnoremap / <ESC>"ryiw/\v
-nnoremap ? <ESC>"ryiw?\v
+nnoremap / <ESC>"ryiw/
+nnoremap ? <ESC>"ryiw?
 nnoremap : <ESC>"ryiw:
 
 " 高亮搜索
@@ -48,16 +50,18 @@ set ideastatusicon=gray
 set idearefactormode=keep
 
 " ctrl cmd
-map <C-A> ^
+nnoremap <C-A> ^
 " nnoremap <C-B> ?\Vfunc <CR>
-map <C-E> $
-map <C-F> <ESC>:action FileStructurePopup<CR>
+nnoremap <C-E> $
+nnoremap <C-F> <ESC>:action FileStructurePopup<CR>
 nnoremap <C-h> <C-w>h
-map <C-I> <ESC>:action Forward<CR>
+nnoremap <C-I> <ESC>:action Forward<CR>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-map <C-O> <ESC>:action Back<CR>
+nnoremap <C-n> <ESC>:action GotoNextError<CR>
+nnoremap <C-o> <ESC>:action Back<CR>
+nnoremap <C-p> <ESC>:action GotoPreviousError<CR>
 
 " leader map
 map <leader>a :action Annotate<CR>
@@ -69,9 +73,9 @@ map <leader>d :action Debug<CR>
 " map <leader>k <Plug>(easymotion-k)
 map <leader>l :action SelectInProjectView<CR>
 map <leader>m :action ShowBookmarks<CR>
-map <leader>n :action GotoNextError<CR>
+" map <leader>n :action GotoNextError<CR>
 map <leader>o :action GotoFile<CR>
-map <leader>p :action GotoPreviousError<CR>
+" map <leader>p :action GotoPreviousError<CR>
 map <leader>r :action RenameElement<CR>
 map <leader>s :action FindInPath<CR>
 map <leader>t :action Terminal.OpenInTerminal<CR>
@@ -82,7 +86,6 @@ map <leader>z :action ToggleDistractionFreeMode<CR>
 map <F6> :action ToggleLineBreakpoint<CR>
 
 " go
-map gd gdzz
 map gD :vs<CR>gd
 map gf :action ReformatCode<CR>
 nnoremap [m ?func<CR>
